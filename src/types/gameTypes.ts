@@ -20,6 +20,11 @@ export interface Player {
     getOutOfJailFreeCards: number; // Keep for convenience, but rely on heldCards
     isBankrupt: boolean;
     heldCards: HeldCard[];
+
+    // Start Roll Phase
+    startRoll?: [number, number] | null;
+    startRollTotal?: number | null;
+    startRollEliminated?: boolean;
 }
 
 export type TileType = 'START' | 'PROPERTY' | 'COMMUNITY_CHEST' | 'TAX' | 'RAILROAD' | 'CHANCE' | 'JAIL' | 'UTILITY' | 'FREE_PARKING' | 'GO_TO_JAIL';

@@ -83,7 +83,10 @@ export const SetupScreen = ({ onStartGame, onCreateRoom, onJoinRoom, onStartOnli
                 isAI: false,
                 getOutOfJailFreeCards: 0,
                 isBankrupt: false,
-                heldCards: []
+                heldCards: [],
+                startRoll: null,
+                startRollTotal: null,
+                startRollEliminated: false
             });
         });
 
@@ -104,7 +107,10 @@ export const SetupScreen = ({ onStartGame, onCreateRoom, onJoinRoom, onStartOnli
                 isAI: true,
                 getOutOfJailFreeCards: 0,
                 isBankrupt: false,
-                heldCards: []
+                heldCards: [],
+                startRoll: null,
+                startRollTotal: null,
+                startRollEliminated: false
             });
         }
 

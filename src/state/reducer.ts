@@ -98,7 +98,10 @@ export const gameReducer = (state: GameState, actionType: NetworkActionType, pay
 
             const playersWithCards = payload.players.map(p => ({
                 ...p,
-                heldCards: p.heldCards || []
+                heldCards: p.heldCards || [],
+                startRoll: p.startRoll ?? null,
+                startRollTotal: p.startRollTotal ?? null,
+                startRollEliminated: p.startRollEliminated ?? false
             }));
             return {
                 ...newState,

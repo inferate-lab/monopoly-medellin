@@ -161,7 +161,13 @@ export const useGameState = () => {
 
     const setupGame = useCallback((players: Player[]) => {
         // Local setup
-        const playersWithCards = players.map(p => ({ ...p, heldCards: [] }));
+        const playersWithCards = players.map(p => ({
+            ...p,
+            heldCards: [],
+            startRoll: null,
+            startRollTotal: null,
+            startRollEliminated: false
+        }));
         reactDispatch({ type: 'SET_PLAYERS', payload: { players: playersWithCards } });
         setTimeout(() => reactDispatch({ type: 'START_GAME' }), 50);
     }, []);

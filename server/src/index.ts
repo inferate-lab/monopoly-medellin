@@ -74,7 +74,10 @@ wss.on('connection', (ws) => {
                     isAI: false,
                     getOutOfJailFreeCards: 0,
                     isBankrupt: false,
-                    heldCards: []
+                    heldCards: [],
+                    startRoll: null,
+                    startRollTotal: null,
+                    startRollEliminated: false
                 };
 
                 newState.players = [hostPlayer];
@@ -127,7 +130,10 @@ wss.on('connection', (ws) => {
                     isAI: false,
                     getOutOfJailFreeCards: 0,
                     isBankrupt: false,
-                    heldCards: []
+                    heldCards: [],
+                    startRoll: null,
+                    startRollTotal: null,
+                    startRollEliminated: false
                 };
 
                 room.state.players.push(newPlayer);
